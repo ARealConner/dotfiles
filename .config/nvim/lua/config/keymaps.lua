@@ -7,11 +7,10 @@ local wk = require("which-key")
 wk.register({
   c = {
     p = {
-      name = "+copilot",
-      t = { "<cmd>lua require('CopilotChat').toggle()<cr>", "Toggle chat window" },
-      r = { "<cmd>CopilotChatReset<cr>", "Reset chat window" },
-      C = { "<cmd>CopilotChatCommitStaged<cr>", "Write commit message for staged changes" },
-      f = { "<Cmd>CopilotChatFixDiagnostic<CR>", "Assist with the diagnostic issue" },
+      name = "+codecompanion",
+      t = { "<cmd>lua ToggleCodeCompanion()<cr>", "Toggle chat window" },
+      T = { "<cmd>CodeCompanionToggle<cr>", "Base toggle window" },
+      a = { "<cmd>CodeCompanionActions<cr>", "Open action palette" },
     },
   },
 }, { prefix = "<leader>" })
@@ -19,14 +18,8 @@ wk.register({
 wk.register({
   c = {
     p = {
-      name = "+copilot",
-      a = { "<Cmd>CopilotChatOpen<CR>", "Ask about selected code" },
-      e = { "<Cmd>CopilotChatExplain<CR>", "Explain the active selection" },
-      r = { "<Cmd>CopilotChatReview<CR>", "Review the selected code" },
-      f = { "<Cmd>CopilotChatFix<CR>", "Fix a problem in the code" },
-      o = { "<Cmd>CopilotChatOptimize<CR>", "Optimize the selected code" },
-      d = { "<Cmd>CopilotChatDocs<CR>", "Add documentation comment for the selection" },
-      t = { "<Cmd>CopilotChatTests<CR>", "Generate tests for the code" },
+      name = "+codecompanion",
+      a = { "<cmd>CodeCompanionActions<cr>", "Open action palette" },
     },
   },
 }, { prefix = "<leader>", mode = "v" })
